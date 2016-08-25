@@ -11,6 +11,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +72,7 @@ public class MainActivity extends Activity {
 
         final NavigationTabBar navigationTabBar = (NavigationTabBar) findViewById(R.id.ntb_horizontal);
         final ArrayList<NavigationTabBar.Model> models = new ArrayList<>();
+
         models.add(
                 new NavigationTabBar.Model.Builder(
                         getResources().getDrawable(R.drawable.ic_first),
@@ -116,6 +118,18 @@ public class MainActivity extends Activity {
         navigationTabBar.setOnTabBarSelectedIndexListener(new NavigationTabBar.OnTabBarSelectedIndexListener() {
             @Override
             public void onStartTabSelected(final NavigationTabBar.Model model, final int index) {
+                if (model.getTitle().matches("Heart")) {
+                    Log.i("System.out", "1st is selected");
+                } else if (model.getTitle().matches("Cup")) {
+                    Log.i("System.out", "2nd is selected");
+                } else if (model.getTitle().matches("Diploma")) {
+                    Log.i("System.out", "3rd is selected");
+                } else if (model.getTitle().matches("Flag")) {
+                    Log.i("System.out", "4th is selected");
+                } else if (model.getTitle().matches("Medal")) {
+                    Log.i("System.out", "5th is selected");
+                }
+
             }
 
             @Override
