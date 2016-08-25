@@ -48,21 +48,21 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolder>{
             holder.category.setText(performance.getCategory());
             holder.date.setText(performance.getDate());
             holder.time.setText(performance.getsTime() + " - " + performance.geteTime());
-            holder.cv.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    // when the cardview is clicked
-                    Log.i("System.out","CV selected");
-                    Fragment performanceDetailFragment = new PerformanceDetailFragment();
-                    // create bundle, with data added into it
-                    Bundle bundle = new Bundle();
-                    bundle.putParcelable("performancesDetailFromPreviousFragment", performance);
-                    bundle.putInt("previousFragmentID", 0);
-                    performanceDetailFragment.setArguments(bundle);
-                    // transact to performanceDetailFragment
-                    activity.getFragmentManager().beginTransaction().replace(R.id.content_frame, performanceDetailFragment).addToBackStack(null).commit();
-                }
-            });
+//            holder.cv.setOnClickListener(new View.OnClickListener() {
+//                @Override
+//                public void onClick(View v) {
+//                    // when the cardview is clicked
+//                    Log.i("System.out","CV selected");
+//                    Fragment performanceDetailFragment = new PerformanceDetailFragment();
+//                    // create bundle, with data added into it
+//                    Bundle bundle = new Bundle();
+//                    bundle.putParcelable("performancesDetailFromPreviousFragment", performance);
+//                    bundle.putInt("previousFragmentID", 0);
+//                    performanceDetailFragment.setArguments(bundle);
+//                    // transact to performanceDetailFragment
+//                    activity.getFragmentManager().beginTransaction().replace(R.id.content_frame, performanceDetailFragment).addToBackStack(null).commit();
+//                }
+//            });
         }
     }
 
