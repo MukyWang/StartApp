@@ -1,4 +1,4 @@
-package com.ambiesoft.startapp;
+package com.ambiesoft.startapp.activity;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -17,6 +17,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.ambiesoft.startapp.R;
 import com.gigamole.navigationtabbar.ntb.NavigationTabBar;
 
 import java.util.ArrayList;
